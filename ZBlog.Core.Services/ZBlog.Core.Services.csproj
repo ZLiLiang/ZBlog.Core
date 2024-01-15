@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ZBlog.Core.IServices\ZBlog.Core.IServices.csproj" />
+    <ProjectReference Include="..\ZBlog.Core.Repository\ZBlog.Core.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
