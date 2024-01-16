@@ -1,0 +1,100 @@
+﻿using SqlSugar;
+
+namespace ZBlog.Core.Model.Models
+{
+    /// <summary>
+    /// 微信二维码
+    /// </summary>
+    [SugarTable("WeChatQR")]
+    public partial class WeChatQR
+    {
+
+        /// <summary>
+        /// 主键id,ticket
+        /// </summary>
+        [SugarColumn(Length = 200, IsPrimaryKey = true, IsNullable = false)]
+        public string Ticket { get; set; }
+
+        /// <summary>
+        /// 需要绑定的公司
+        /// </summary>
+        [SugarColumn(Length = 100, IsNullable = false)]
+        public string BindCompanyId { get; set; }
+
+        /// <summary>
+        /// 需要绑定的员工id
+        /// </summary>
+        [SugarColumn(Length = 100, IsNullable = false)]
+        public string BindJobId { get; set; }
+
+        /// <summary>
+        /// 需要绑定的员工昵称
+        /// </summary>
+        [SugarColumn(Length = 100, IsNullable = true)]
+        public string BindJobNick { get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime CrateTime { get; set; }
+
+        /// <summary>
+        /// 关联的公众号
+        /// </summary>
+        [SugarColumn(Length = 100, IsNullable = false)]
+        public string PublicAccount { get; set; }
+
+        /// <summary>
+        /// 是否已使用
+        /// </summary>
+        public bool IsUsed { get; set; }
+
+        /// <summary>
+        /// 使用时间
+        /// </summary>
+        [SugarColumn(IsNullable = true)]
+        public DateTime? UseTime { get; set; }
+
+        /// <summary>
+        /// 关联的微信用户id
+        /// </summary>
+        [SugarColumn(Length = 100, IsNullable = true)]
+        public string UseOpenid { get; set; }
+
+        /// <summary>
+        /// 创建者id
+        /// </summary>
+        [SugarColumn(IsNullable = true)]
+        public int? CreateId { get; set; }
+
+        /// <summary>
+        /// 创建人
+        /// </summary>
+        [SugarColumn(IsNullable = true)]
+        public string CreateBy { get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [SugarColumn(IsNullable = true)]
+        public DateTime? CreateTime { get; set; }
+
+        /// <summary>
+        /// 修改者id
+        /// </summary>
+        [SugarColumn(IsNullable = true)]
+        public int? ModifyId { get; set; }
+
+        /// <summary>
+        /// 修改人
+        /// </summary>
+        [SugarColumn(IsNullable = true)]
+        public string ModifyBy { get; set; }
+
+        /// <summary>
+        /// 修改时间
+        /// </summary>
+        [SugarColumn(IsNullable = true)]
+        public DateTime? ModifyTime { get; set; }
+    }
+}
