@@ -8,36 +8,36 @@
         /// <summary>
         /// 任务ID
         /// </summary>
-        public string jobId { get; set; }
+        public string JobId { get; set; }
 
         /// <summary>
         /// 任务名称
         /// </summary>
-        public string jobName { get; set; }
+        public string JobName { get; set; }
 
         /// <summary>
         /// 任务分组
         /// </summary>
-        public string jobGroup { get; set; }
+        public string JobGroup { get; set; }
 
         /// <summary>
         /// 触发器ID
         /// </summary>
-        public string triggerId { get; set; }
+        public string TriggerId { get; set; }
 
         /// <summary>
         /// 触发器名称
         /// </summary>
-        public string triggerName { get; set; }
+        public string TriggerName { get; set; }
 
         /// <summary>
         /// 触发器分组
         /// </summary>
-        public string triggerGroup { get; set; }
+        public string TriggerGroup { get; set; }
 
         /// <summary>
         /// 触发器状态
         /// </summary>
-        public string triggerStatus { get; set; }
+        public string TriggerStatus { get; set; }
     }
 }
