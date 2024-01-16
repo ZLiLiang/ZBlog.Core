@@ -1,4 +1,4 @@
-﻿using ZBlog.Core.Model.Enums;
+﻿using ZBlog.Core.Model.CustomEnums;
 
 namespace ZBlog.Core.Model
 {

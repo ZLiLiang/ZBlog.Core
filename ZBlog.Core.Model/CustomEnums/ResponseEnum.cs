@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace ZBlog.Core.Model.Enums
+namespace ZBlog.Core.Model.CustomEnums
 {
     public enum ResponseEnum
     {

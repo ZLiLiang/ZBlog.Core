@@ -1,4 +1,4 @@
-﻿namespace ZBlog.Core.Model.Enums
+﻿namespace ZBlog.Core.Model.CustomEnums
 {
     public enum HttpEnum
     {
