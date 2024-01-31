@@ -25,7 +25,7 @@ namespace ZBlog.Core.Model.Models
         /// <summary>
         /// 租户类型
         /// </summary>
-        public TenantTypeEnum TypeEnum { get; set; }
+        public TenantTypeEnum TenantType { get; set; }
 
         /// <summary>
         /// 数据库/租户标识 不可重复<br/>
@@ -46,7 +46,7 @@ namespace ZBlog.Core.Model.Models
         /// 使用Id方案,可无需配置
         /// </summary>
         [SugarColumn(IsNullable = true)]
-        public DbType DbType { get; set; }
+        public DbType? DbType { get; set; }
 
         /// <summary>
         /// 数据库连接<br/>
