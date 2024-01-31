@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Magicodes.IE.Excel" Version="2.7.5.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="8.0.0" />
+    <PackageReference Include="MiniProfiler.Shared" Version="4.3.8" />
+    <PackageReference Include="PinYinConverterCore" Version="1.0.2" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
+    <PackageReference Include="RSAExtensions" Version="1.1.1" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ocelot.Provider.Nacos\Ocelot.Provider.Nacos.csproj" />
     <ProjectReference Include="..\ZBlog.Core.Model\ZBlog.Core.Model.csproj" />
   </ItemGroup>
 
