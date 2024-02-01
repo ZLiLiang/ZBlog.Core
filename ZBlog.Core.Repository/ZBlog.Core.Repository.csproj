@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.23.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ZBlog.Core.Common\ZBlog.Core.Common.csproj" />
     <ProjectReference Include="..\ZBlog.Core.Model\ZBlog.Core.Model.csproj" />
   </ItemGroup>
