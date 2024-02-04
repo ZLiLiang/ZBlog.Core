@@ -101,11 +101,13 @@ namespace ZBlog.Core.Repository.UnitOfWorks
 
         public UnitOfWork CreateUnitOfWork()
         {
-            UnitOfWork unitOfWork = new UnitOfWork();
-            unitOfWork.Logger = _logger;
-            unitOfWork.Db = _sqlSugarClient;
-            unitOfWork.Tenant = (ITenant)_sqlSugarClient;
-            unitOfWork.IsTran = true;
+            UnitOfWork unitOfWork = new UnitOfWork
+            {
+                Logger = _logger,
+                Db = _sqlSugarClient,
+                Tenant = (ITenant)_sqlSugarClient,
+                IsTran = true
+            };
 
             unitOfWork.Db.Open();
             unitOfWork.Tenant.BeginTran();
