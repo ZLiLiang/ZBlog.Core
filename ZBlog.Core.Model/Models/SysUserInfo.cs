@@ -9,6 +9,23 @@ namespace ZBlog.Core.Model.Models
     [SugarTable("SysUserInfo", "用户表")]  //('数据库表名'，'数据库表备注')
     public class SysUserInfo : SysUserInfoRoot<long>
     {
+        public SysUserInfo()
+        {
+        }
+
+        public SysUserInfo(string loginName, string loginPWD)
+        {
+            LoginName = loginName;
+            LoginPWD = loginPWD;
+            RealName = LoginName;
+            Status = 0;
+            CreateTime = DateTime.Now;
+            UpdateTime = DateTime.Now;
+            LastErrorTime = DateTime.Now;
+            ErrorCount = 0;
+            Name = "";
+        }
+
         /// <summary>
         /// 登录账号
         /// </summary>

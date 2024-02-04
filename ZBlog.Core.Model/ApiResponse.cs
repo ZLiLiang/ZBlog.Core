@@ -42,9 +42,9 @@ namespace ZBlog.Core.Model
 
             MessageModel = new MessageModel<string>
             {
-                status = Status,
-                msg = Value,
-                success = apiCode == StatusCode.CODE200
+                Status = Status,
+                Msg = Value,
+                Success = apiCode == StatusCode.CODE200
             };
         }
 

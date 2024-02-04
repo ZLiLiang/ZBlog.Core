@@ -33,7 +33,7 @@ namespace ZBlog.Core.Model.Models
         /// 绑定微信id
         /// </summary>
         [SugarColumn(Length = 100, IsNullable = false)]
-        public string SubUserOpenId { get; set; }
+        public string SubUserOpenID { get; set; }
 
         /// <summary>
         /// 绑定微信联合id
@@ -67,7 +67,7 @@ namespace ZBlog.Core.Model.Models
         /// 上次绑定微信id
         /// </summary>
         [SugarColumn(Length = 100, IsNullable = true)]
-        public string LastSubUserOpenId { get; set; }
+        public string LastSubUserOpenID { get; set; }
 
         /// <summary>
         /// 创建者id
