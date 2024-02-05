@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿using MapsterMapper;
 using ZBlog.Core.Common.CustomAttribute;
 using ZBlog.Core.IServices;
 using ZBlog.Core.Model.Models;
