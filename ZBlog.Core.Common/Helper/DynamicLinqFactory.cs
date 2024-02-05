@@ -4,7 +4,6 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using ZBlog.Core.Common.Extensions;
-using AutoMapper;
 
 namespace ZBlog.Core.Common.Helper
 {
