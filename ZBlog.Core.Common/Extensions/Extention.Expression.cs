@@ -201,7 +201,7 @@ namespace ZBlog.Core.Common.Extensions
             var parameterReplacer = new ParameterReplaceVisitor(newParameter);
             var left = parameterReplacer.Visit(one.Body);
             var right = parameterReplacer.Visit(another.Body);
-            var body = Expression.AndAlso(left, right);
+            var body = Expression.And(left, right);
 
             return Expression.Lambda<Func<T, bool>>(body, newParameter);
         }
