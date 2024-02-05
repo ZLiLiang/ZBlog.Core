@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Mapster;
+using MapsterMapper;
 
 namespace ZBlog.Core.Model
 {
@@ -48,24 +49,25 @@ namespace ZBlog.Core.Model
             return new PageModel<TOut>(PageIndex, DataCount, PageSize, default);
         }
 
-        public PageModel<TOut> ConverTo<TOut>(IMapper mapper)
+        public PageModel<TOut> AdaptTo<TOut>()
         {
             var model = ConverTo<TOut>();
 
             if (Data != null)
             {
-                model.Data = mapper.Map<List<TOut>>(Data);
+                model.Data = Data.Adapt<List<TOut>>();
             }
 
             return model;
         }
 
-        public PageModel<TOut> ConverTo<TOut>(IMapper mapper, Action<IMappingOperationOptions> options)
+        public PageModel<TOut> AdaptTo<TOut>(TypeAdapterConfig config)
         {
             var model = ConverTo<TOut>();
+
             if (Data != null)
             {
-                model.Data = mapper.Map<List<TOut>>(Data, options);
+                model.Data = Data.Adapt<List<TOut>>(config);
             }
 
             return model;
