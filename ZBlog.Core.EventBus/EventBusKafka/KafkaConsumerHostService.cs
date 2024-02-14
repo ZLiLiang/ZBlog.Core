@@ -19,13 +19,13 @@ namespace ZBlog.Core.EventBus.EventBusKafka
         private readonly string AUTOFAC_SCOPE_NAME = "zblogcore_event_bus";
         private readonly ILogger<KafkaConsumerHostService> _logger;
         private readonly IConsumer<string, byte[]> _consumer;
-        private readonly KafkaOption _option;
+        private readonly KafkaOptions _option;
         private readonly IEventBusSubscriptionsManager _subsManager;
         private readonly ILifetimeScope _autofac;
         private CancellationTokenSource cts = new();
 
         public KafkaConsumerHostService(ILogger<KafkaConsumerHostService> logger,
-            IOptions<KafkaOption> options,
+            IOptions<KafkaOptions> options,
             IEventBusSubscriptionsManager eventBusSubscriptionsManager,
             ILifetimeScope autofac)
         {

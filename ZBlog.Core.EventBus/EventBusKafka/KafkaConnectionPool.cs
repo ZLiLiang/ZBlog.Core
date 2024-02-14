@@ -10,15 +10,15 @@ namespace ZBlog.Core.EventBus.EventBusKafka
     /// </summary>
     public class KafkaConnectionPool : IKafkaConnectionPool
     {
-        private readonly KafkaOption _option;
+        private readonly KafkaOptions _options;
         private ConcurrentQueue<IProducer<string, byte[]>> _producerPool = new();
         private int _currentCount;
         private int _maxSize;
 
-        public KafkaConnectionPool(IOptions<KafkaOption> option)
+        public KafkaConnectionPool(IOptions<KafkaOptions> options)
         {
-            _option = option.Value;
-            _maxSize = _option.ConnectionPoolSize;
+            _options = options.Value;
+            _maxSize = _options.ConnectionPoolSize;
         }
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace ZBlog.Core.EventBus.EventBusKafka
 
             var config = new ProducerConfig
             {
-                BootstrapServers = _option.Servers,
+                BootstrapServers = _options.Servers,
                 QueueBufferingMaxMessages = 10,
                 MessageTimeoutMs = 5000,
                 RequestTimeoutMs = 3000

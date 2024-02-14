@@ -15,12 +15,12 @@ namespace ZBlog.Core.EventBus.EventBusKafka
         private readonly ILogger<EventBusKafka> _logger;
         private readonly IEventBusSubscriptionsManager _subsManager;
         private readonly IKafkaConnectionPool _connectionPool;
-        private readonly KafkaOption _option;
+        private readonly KafkaOptions _option;
 
         public EventBusKafka(ILogger<EventBusKafka> logger,
             IEventBusSubscriptionsManager subsManager,
             IKafkaConnectionPool connectionPool,
-            IOptions<KafkaOption> option)
+            IOptions<KafkaOptions> option)
         {
             _logger = logger;
             _subsManager = subsManager;

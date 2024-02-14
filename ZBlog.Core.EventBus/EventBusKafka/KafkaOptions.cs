@@ -3,7 +3,7 @@
     /// <summary>
     /// Kafka 配置项
     /// </summary>
-    public class KafkaOption
+    public class KafkaOptions
     {
         /// <summary>
         /// 连接池数量
