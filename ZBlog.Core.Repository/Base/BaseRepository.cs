@@ -3,7 +3,7 @@ using System.Data;
 using System.Linq.Expressions;
 using System.Reflection;
 using ZBlog.Core.Common;
-using ZBlog.Core.Common.DataBase;
+using ZBlog.Core.Common.DB;
 using ZBlog.Core.Model;
 using ZBlog.Core.Model.Models;
 using ZBlog.Core.Model.Tenants;
