@@ -1,4 +1,4 @@
-﻿namespace ZBlog.Core.Common.DataBase
+﻿namespace ZBlog.Core.Common.DB
 {
     public static class MainDb
     {

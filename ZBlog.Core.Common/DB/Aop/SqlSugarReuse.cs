@@ -1,6 +1,6 @@
 ﻿using SqlSugar;
 
-namespace ZBlog.Core.Common.DataBase.Aop
+namespace ZBlog.Core.Common.DB.Aop
 {
     public static class SqlSugarReuse
     {

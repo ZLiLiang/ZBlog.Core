@@ -4,7 +4,7 @@ using ZBlog.Core.Common.Helper;
 using ZBlog.Core.Model.Models;
 using ZBlog.Core.Model.Tenants;
 
-namespace ZBlog.Core.Common.DataBase
+namespace ZBlog.Core.Common.DB
 {
     public static class TenantUtil
     {
@@ -53,7 +53,7 @@ namespace ZBlog.Core.Common.DataBase
         {
             return RepositorySetting.Entitys
                 .Where(it => !it.IsInterface && !it.IsAbstract && it.IsClass)
-                .Where(it => IsTenantEntity(it, tenantType))
+                .Where(it => it.IsTenantEntity(tenantType))
                 .ToList();
         }
 
@@ -84,7 +84,7 @@ namespace ZBlog.Core.Common.DataBase
 
         public static string GetTenantTableName(this Type type, ISqlSugarClient db, SysTenant tenant)
         {
-            return GetTenantTableName(type, db, tenant.Id.ToString());
+            return type.GetTenantTableName(db, tenant.Id.ToString());
         }
 
         public static void SetTenantTable(this ISqlSugarClient db, string id)

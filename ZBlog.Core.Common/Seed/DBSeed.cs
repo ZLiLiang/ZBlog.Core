@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Text;
 using ZBlog.Core.Common.Const;
-using ZBlog.Core.Common.DataBase;
+using ZBlog.Core.Common.DB;
 using ZBlog.Core.Common.Extensions;
 using ZBlog.Core.Common.Helper;
 using ZBlog.Core.Common.Helper.Console;

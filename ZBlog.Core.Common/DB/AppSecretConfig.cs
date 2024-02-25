@@ -1,6 +1,6 @@
 ﻿using ZBlog.Core.Common.Helper;
 
-namespace ZBlog.Core.Common.DataBase
+namespace ZBlog.Core.Common.DB
 {
     public class AppSecretConfig
     {

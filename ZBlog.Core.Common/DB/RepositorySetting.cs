@@ -3,7 +3,7 @@ using ZBlog.Core.Model.Models.RootTkey;
 using ZBlog.Core.Model.Models.RootTkey.Interface;
 using ZBlog.Core.Model.Tenants;
 
-namespace ZBlog.Core.Common.DataBase
+namespace ZBlog.Core.Common.DB
 {
     public class RepositorySetting
     {

@@ -6,7 +6,7 @@ using ZBlog.Core.Common.LogHelper;
 using ZBlog.Core.Model.Models.RootTkey;
 using ZBlog.Core.Model.Tenants;
 
-namespace ZBlog.Core.Common.DataBase.Aop
+namespace ZBlog.Core.Common.DB.Aop
 {
     public static class SqlSugarAop
     {

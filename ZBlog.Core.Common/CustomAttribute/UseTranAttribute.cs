@@ -1,4 +1,4 @@
-﻿using ZBlog.Core.Common.DataBase;
+﻿using ZBlog.Core.Common.DB;
 
 namespace ZBlog.Core.Common.CustomAttribute
 {

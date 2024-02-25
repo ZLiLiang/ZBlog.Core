@@ -4,7 +4,7 @@ using System.Reflection;
 using ZBlog.Core.Common.Extensions;
 using ZBlog.Core.Model.Models.RootTkey;
 
-namespace ZBlog.Core.Common.DataBase
+namespace ZBlog.Core.Common.DB
 {
     public class EntityUtility
     {

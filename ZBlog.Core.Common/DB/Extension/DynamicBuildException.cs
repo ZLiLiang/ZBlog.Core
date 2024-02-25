@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Reflection.Emit;
 
-namespace ZBlog.Core.Common.DataBase.Extension
+namespace ZBlog.Core.Common.DB.Extension
 {
     public static class DynamicBuildException
     {

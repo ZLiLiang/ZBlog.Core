@@ -1,7 +1,7 @@
 ﻿using SqlSugar;
 using System.Reflection;
 
-namespace ZBlog.Core.Common.DataBase.Extension
+namespace ZBlog.Core.Common.DB.Extension
 {
     public static class DbEntityException
     {
