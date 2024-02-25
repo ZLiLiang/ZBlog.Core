@@ -1,5 +1,5 @@
 ﻿using ZBlog.Core.Common.CustomAttribute;
-using ZBlog.Core.Common.DataBase;
+using ZBlog.Core.Common.DB;
 using ZBlog.Core.IServices;
 using ZBlog.Core.Model.Models;
 using ZBlog.Core.Repository.Base;

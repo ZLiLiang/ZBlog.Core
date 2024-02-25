@@ -1,4 +1,4 @@
-﻿using ZBlog.Core.Common.DataBase;
+﻿using ZBlog.Core.Common.DB;
 using ZBlog.Core.Common.Seed;
 using ZBlog.Core.IServices;
 using ZBlog.Core.Model.Models;

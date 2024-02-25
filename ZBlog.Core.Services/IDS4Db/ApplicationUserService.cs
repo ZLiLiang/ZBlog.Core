@@ -1,4 +1,4 @@
-﻿using ZBlog.Core.Common.DataBase.Extension;
+﻿using ZBlog.Core.Common.DB.Extension;
 using ZBlog.Core.IServices.IDS4Db;
 using ZBlog.Core.Model.IDS4DbModels;
 using ZBlog.Core.Services.Base;
