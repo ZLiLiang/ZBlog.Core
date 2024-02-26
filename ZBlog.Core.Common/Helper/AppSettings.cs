@@ -8,7 +8,7 @@ namespace ZBlog.Core.Common.Helper
     /// </summary>
     public class AppSettings
     {
-        private static IConfiguration _configuration;
+        public static IConfiguration Configuration;
 
         public AppSettings(string contentPath)
         {
@@ -16,7 +16,7 @@ namespace ZBlog.Core.Common.Helper
             //如果把配置文件 是 根据环境变量来分开了，可以这样写
             //$"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json";
 
-            _configuration = new ConfigurationBuilder()
+            Configuration = new ConfigurationBuilder()
                 .SetBasePath(contentPath)
                 .Add(new JsonConfigurationSource
                 {
@@ -29,7 +29,7 @@ namespace ZBlog.Core.Common.Helper
 
         public AppSettings(IConfiguration configuration)
         {
-            _configuration = configuration;
+            Configuration = configuration;
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace ZBlog.Core.Common.Helper
             {
                 if (sections.Any())
                 {
-                    return _configuration[string.Join(":", sections)];
+                    return Configuration[string.Join(":", sections)];
                 }
             }
             catch (Exception)
@@ -65,7 +65,7 @@ namespace ZBlog.Core.Common.Helper
         {
             List<T> list = [];
             // 引用 Microsoft.Extensions.Configuration.Binder 包
-            _configuration.Bind(string.Join(":", sections), list);
+            Configuration.Bind(string.Join(":", sections), list);
 
             return list;
         }
@@ -79,7 +79,7 @@ namespace ZBlog.Core.Common.Helper
         {
             try
             {
-                return _configuration[sectionsPath];
+                return Configuration[sectionsPath];
             }
             catch (Exception)
             {

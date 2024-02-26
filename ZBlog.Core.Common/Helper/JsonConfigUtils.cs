@@ -93,7 +93,7 @@ namespace ZBlog.Core.Common.Helper
         }
 
         /// <summary>
-        /// 获取Nacos配置
+        /// 获取Nacos服务地址
         /// </summary>
         public static List<string> NacosServerAddresses
         {
@@ -104,7 +104,7 @@ namespace ZBlog.Core.Common.Helper
         }
 
         /// <summary>
-        /// 获取Nacos配置
+        /// 获取Nacos默认超时时间
         /// </summary>
         public static int NacosDefaultTimeOut
         {
@@ -115,7 +115,7 @@ namespace ZBlog.Core.Common.Helper
         }
 
         /// <summary>
-        /// 获取Nacos配置
+        /// 获取Nacos空间名
         /// </summary>
         public static string NacosNamespace
         {
@@ -126,7 +126,7 @@ namespace ZBlog.Core.Common.Helper
         }
 
         /// <summary>
-        /// 获取Nacos配置
+        /// 获取Nacos服务名称
         /// </summary>
         public static string NacosServiceName
         {
@@ -137,7 +137,7 @@ namespace ZBlog.Core.Common.Helper
         }
 
         /// <summary>
-        /// 获取Nacos配置
+        /// 获取Nacos监听间隔
         /// </summary>
         public static int ListenInterval
         {
@@ -148,7 +148,7 @@ namespace ZBlog.Core.Common.Helper
         }
 
         /// <summary>
-        /// 获取Nacos配置
+        /// 获取NacosIP地址
         /// </summary>
         public static string NacosIp
         {
@@ -160,7 +160,7 @@ namespace ZBlog.Core.Common.Helper
         }
 
         /// <summary>
-        /// 获取Nacos配置
+        /// 获取Nacos端口
         /// </summary>
         public static int NacosPort
         {
@@ -171,7 +171,7 @@ namespace ZBlog.Core.Common.Helper
         }
 
         /// <summary>
-        /// 获取Nacos配置
+        /// 获取Nacos开启注册
         /// </summary>
         public static bool NacosRegisterEnabled
         {
@@ -182,7 +182,7 @@ namespace ZBlog.Core.Common.Helper
         }
 
         /// <summary>
-        /// 获取Nacos配置
+        /// 获取Nacos元数据
         /// </summary>
         public static Dictionary<string, string> NacosMetadata
         {
