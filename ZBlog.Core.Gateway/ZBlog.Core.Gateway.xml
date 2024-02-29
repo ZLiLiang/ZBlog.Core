@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZBlog.Core.Gateway</name>
+    </assembly>
+    <members>
+        <member name="T:ZBlog.Core.Gateway.Extensions.ApiResponseHandler">
+            <summary>
+            这里不需要，目前集成的是 ZBlog.Core.Extensions 下的接口处理器
+            但是你可以单独在网关中使用这个。
+            </summary>
+        </member>
+        <member name="T:ZBlog.Core.Gateway.Helper.CustomJwtTokenAuthMiddleware">
+            <summary>
+            中间件
+            原做为自定义授权中间件
+            先做检查 header token的使用
+            </summary>
+        </member>
+        <member name="P:ZBlog.Core.Gateway.Helper.CustomJwtTokenAuthMiddleware.Schemes">
+            <summary>
+            验证方案提供对象
+            </summary>
+        </member>
+        <member name="F:ZBlog.Core.Gateway.Helper.CustomJwtTokenAuthMiddleware._next">
+            <summary>
+            请求上下文
+            </summary>
+        </member>
+        <member name="M:ZBlog.Core.Gateway.Helper.CustomJwtTokenAuthMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            网关授权
+            </summary>
+            <param name="httpContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZBlog.Core.Gateway.Helper.CustomJwtTokenAuthMiddleware.SendResponse(Microsoft.AspNetCore.Http.HttpContext,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            返回相应
+            </summary>
+            <param name="context"></param>
+            <param name="message"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZBlog.Core.Gateway.Helper.CustomJwtTokenAuthMiddleware.CheckWhiteList(System.String)">
+            <summary>
+            判断是否在白名单内，支持通配符 **** 
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

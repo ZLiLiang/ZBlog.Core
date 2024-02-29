@@ -1,0 +1,6 @@
+@ZBlog.Core.Gateway_HostAddress = http://localhost:5244
+
+GET {{ZBlog.Core.Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

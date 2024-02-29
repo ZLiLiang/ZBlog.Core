@@ -1,0 +1,64 @@
+﻿using System.Net;
+using System.Text;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using ZBlog.Core.Model;
+using ZBlog.Core.Model.CustomEnums;
+
+namespace ZBlog.Core.Gateway.Extensions
+{
+    /// <summary>
+    /// 这里不需要，目前集成的是 ZBlog.Core.Extensions 下的接口处理器
+    /// 但是你可以单独在网关中使用这个。
+    /// </summary>
+    public class ApiResponseHandler : DelegatingHandler
+    {
+        JsonSerializerSettings jsonSerializerSettings = new JsonSerializerSettings
+        {
+            ContractResolver = new CamelCasePropertyNamesContractResolver()
+        };
+
+        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            var response = await base.SendAsync(request, cancellationToken);
+            var contentType = response.Content.Headers.ContentType?.MediaType ?? "";
+            if (!contentType.Equals("application/json"))
+                return response;
+
+            dynamic result = null;
+            var resultStr = await response.Content.ReadAsStringAsync();
+            try
+            {
+                result = JsonConvert.DeserializeObject<dynamic>(resultStr);
+            }
+            catch (Exception)
+            {
+                return response;
+            }
+
+            if (result != null && result.code == 500)
+                resultStr = result.msg.ToString();
+
+            var apiResponse = new ApiResponse(StatusCode.CODE200).MessageModel;
+            if (response.StatusCode != HttpStatusCode.OK || result.code == (int)HttpStatusCode.InternalServerError)
+            {
+                var exception = new Exception(resultStr);
+                apiResponse = new ApiResponse(StatusCode.CODE500).MessageModel;
+            }
+            else if (result.code == (int)HttpStatusCode.Forbidden)
+            {
+                apiResponse = new ApiResponse(StatusCode.CODE403).MessageModel;
+            }
+
+            var statusCode = apiResponse.Status == 500 ? HttpStatusCode.InternalServerError
+                : apiResponse.Status == 401 ? HttpStatusCode.Unauthorized
+                : apiResponse.Status == 403 ? HttpStatusCode.Forbidden
+                : HttpStatusCode.OK;
+
+            response.StatusCode = statusCode;
+            response.Content = new StringContent(JsonConvert.SerializeObject(apiResponse, jsonSerializerSettings), Encoding.UTF8, "application/json");
+
+            return response;
+        }
+    }
+}
