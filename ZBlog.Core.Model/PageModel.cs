@@ -61,13 +61,13 @@ namespace ZBlog.Core.Model
             return model;
         }
 
-        public PageModel<TOut> AdaptTo<TOut>(TypeAdapterConfig config)
+        public PageModel<TOut> AdaptTo<TOut>(IMapper mapper)
         {
             var model = ConverTo<TOut>();
 
             if (Data != null)
             {
-                model.Data = Data.Adapt<List<TOut>>(config);
+                model.Data = mapper.Map<List<TOut>>(Data);
             }
 
             return model;

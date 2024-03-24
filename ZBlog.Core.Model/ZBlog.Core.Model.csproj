@@ -5,6 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>..\ZBlog.Core.WebAPI\ZBlog.Core.Model.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
